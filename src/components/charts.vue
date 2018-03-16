@@ -89,7 +89,7 @@
                             _this.width=ev.clientX-15+'px'
                         }
                         _this.charts.resize({
-                            width:(document.body.scrollWidth-223)*2-ev.clientX+'px'
+                            width:(document.body.scrollWidth-223)*3-ev.clientX*2+'px'
                         }) 
                         _this.height=ev.clientY-70+'px'
                         if(ev.clientY-70>400)
