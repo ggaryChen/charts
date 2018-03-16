@@ -67,14 +67,14 @@
             },
             changeshow(){
                 this.isshow=!this.isshow
-                this.width=this.isshow?document.body.scrollWidth-223+'px':'100%'
+                this.width=this.isshow?document.body.scrollWidth-230+'px':'100%'
                 if(!this.isshow){
                     this.charts.resize({
                         width:document.body.scrollWidth
                     })
                 }else{
                     this.charts.resize({
-                        width:document.body.scrollWidth-223+'px'
+                        width:document.body.scrollWidth-230+'px'
                     }) 
                 }
             },
@@ -88,6 +88,9 @@
                         }else{
                             _this.width=ev.clientX-15+'px'
                         }
+                        _this.charts.resize({
+                            width:(document.body.scrollWidth-223)*2-ev.clientX+'px'
+                        }) 
                         _this.height=ev.clientY-70+'px'
                         if(ev.clientY-70>400)
                         _this.charts.resize({
