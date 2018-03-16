@@ -87,10 +87,16 @@
                             _this.width=document.body.scrollWidth-212+'px'
                         }else{
                             _this.width=ev.clientX-15+'px'
+                            if(_this.isshow===true){
+                                _this.charts.resize({
+                                    width:(document.body.scrollWidth-223)*4-ev.clientX*3+'px'
+                                })
+                            }else{
+                                _this.charts.resize({
+                                    width:document.body.scrollWidth*4-ev.clientX*3+'px'
+                                })
+                            }
                         }
-                        _this.charts.resize({
-                            width:(document.body.scrollWidth-223)*3-ev.clientX*2+'px'
-                        }) 
                         _this.height=ev.clientY-70+'px'
                         if(ev.clientY-70>400)
                         _this.charts.resize({
